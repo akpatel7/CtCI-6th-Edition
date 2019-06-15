@@ -1,3 +1,8 @@
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 var allUniqueChars = function(string) {
   
   // O(n^2) approach, no additional data structures used
@@ -14,3 +19,8 @@ var allUniqueChars = function(string) {
 
 /* TESTS */
 // log some tests here
+
+readline.question(`Input string?`, (string) => {
+  console.log(`allUniqueChars ${string}: ${allUniqueChars(string)}`);
+  readline.close();
+});

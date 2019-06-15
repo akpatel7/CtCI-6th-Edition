@@ -1,6 +1,6 @@
 {
   "rules": {
-    "quotes": [2, 'single'],
+    "quotes": [2, "single", {"allowTemplateLiterals": true}],
     "semi": 2,
     "curly": 2,
     "camelcase": 0,
@@ -10,13 +10,21 @@
     "strict": 0,
     "no-multi-spaces": 2,
     "semi-spacing": 2,
-    "no-shadow": 2
+    "no-shadow": 2,
+    "allowTemplateLiterals": true
   },
-
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6" : true
   },
   "globals": {
     "chrome": false
